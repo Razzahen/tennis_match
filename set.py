@@ -48,6 +48,8 @@ class Set:
             # Check if the set is over.
             if self._is_set_over():
                 self.set_over = True
+                # Start of a new set
+                self.current_game = RegularGame(self.players)
             else:
                 # Decide whether the next game should be a tie-break.
                 p1, p2 = self.players
